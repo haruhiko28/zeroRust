@@ -33,3 +33,4 @@ let (h2o_1, h2o_2) = burn(h2_1, h2_2, o2);
 // 既に消費した分子は使えない
 // let (h2o_1, h2o_2) = burn(h2_1, h2_2, o2);
  
+ struct Coin {}
