@@ -34,3 +34,16 @@ let (h2o_1, h2o_2) = burn(h2_1, h2_2, o2);
 // let (h2o_1, h2o_2) = burn(h2_1, h2_2, o2);
  
  struct Coin {}
+
+ let a = Coin {};
+ let b = a;
+ let c = b;
+
+ // let d = a;
+
+ let a;
+ {
+    let b = 10;
+    a = &b;
+ }
+ println!("{}", a);
