@@ -37,10 +37,10 @@ fn main() {
 
     // let d = a;
 
-    let a;
+    let a = 200;
     {
         let b = 10;
-        a = &b;
+        // a = &b;
     }
     println!("{}", a);
 
