@@ -50,4 +50,18 @@ fn main() {
         a = &b;
         println!("{}", a);
     }
+
+    let a: i32 = 10;
+    let b: &i32 = &a;
+
+    square(b);
+    Foo {x: &a};
+}
+
+fn square<'a> (x: &'a i32) -> i32 {
+    x * x
+}
+
+struct Foo<'a> {
+    x: &'a i32,
 }
