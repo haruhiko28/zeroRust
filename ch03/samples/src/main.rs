@@ -56,6 +56,14 @@ fn main() {
 
     square(b);
     Foo {x: &a};
+
+    let mut x = 10;
+    {
+        let y = 20;
+        add(&mut x, &y);
+    }
+    println!("{x}");
+
 }
 
 fn square<'a> (x: &'a i32) -> i32 {
@@ -64,4 +72,8 @@ fn square<'a> (x: &'a i32) -> i32 {
 
 struct Foo<'a> {
     x: &'a i32,
+}
+
+fn add<'a> (x: &'a mut i32, y: &'a i32) {
+    *x += *y;
 }
