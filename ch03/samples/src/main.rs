@@ -64,6 +64,13 @@ fn main() {
     }
     println!("{x}");
 
+    let a = 10;
+    {
+        let b = &a;
+        let c = &a;
+        let d = b;
+    }
+    
 }
 
 fn square<'a> (x: &'a i32) -> i32 {
