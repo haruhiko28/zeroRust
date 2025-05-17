@@ -71,6 +71,12 @@ fn main() {
         let d = b;
     }
     
+    let a;
+    {
+        let b = 10;
+        a = &b;
+    }
+    // println!("{}", a); // error
 }
 
 fn square<'a> (x: &'a i32) -> i32 {
